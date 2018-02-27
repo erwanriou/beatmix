@@ -31,7 +31,7 @@ const toggleDrum = (arrayName, i) => {
   }
   // we apply the function here
   drums[i] = !drums[i];
-};
+}
 
 // Clear Function
 const clear = (arrayName) => {
@@ -41,4 +41,19 @@ const clear = (arrayName) => {
   if (drums) {
     drums.fill(false);
   }
+}
+
+// Invert Function
+const invert = (arrayName) => {
+  // we call here the getArrayName on toggleDrum attribute
+  const drums = getArrayName(arrayName);
+  // we check the existency
+  if (!drums) {
+    return;
+  }
+  // we apply the function here
+  for (var i = 0; i < drums.length; i++) {
+    drums[i] = !drums[i];
+  }
+
 }
